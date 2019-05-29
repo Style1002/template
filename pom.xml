@@ -41,6 +41,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 测试git stash -->
     </dependencies>
 
     <build>
