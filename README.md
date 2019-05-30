@@ -8,3 +8,7 @@ properties转成excel文件
 List数组中合并相同属性并累加其它所需属性，最终生成map
     com.gouge.template.list.Sort
     com.gouge.template.list.Student
+3.
+java8
+    3.1 lambda表达式的学习
+        com.gouge.template.java8.lambda
