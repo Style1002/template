@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript">
+    /*
+    Js中数据类型：String、Number、Boolean、Null、Undefined、
+    Object(复合数据类型)
+        1.内建对象：String、Function、Math、Number、Boolean、Object
+        2.宿主对象：BOM、DOM
+        3.自定义对象：使用new关键字调用函数，是构造函数constructor
+     */
+
+    /*
+    1.创建对象
+     */
+    var obj = new Object();
+    console.log(typeof obj);
+
+    /**
+     * 1.1对象的属性名不强制要求遵守标识符的规范
+     * 使用特殊属性名：对象["属性名"] = 属性值，读取：对象["属性名"]
+     *      []中可以添加变量，这样变量值是多少就会读取那个属性
+     * @type {string}
+     */
+    obj.name = "名字";
+    obj["属性名"] = "属性值";
+    var empt = "属性名";
+    obj["知识"] = "需要学习";
+    document.writeln(obj[empt]);
+    document.writeln(obj["知识"]);
+
+    /*1.2读取对象中的属性值：对象.属性名*/
+    console.log(obj.name);
+
+    /*1.3修改对象属性：对象.属性 = 新值*/
+    obj.name = "新名字";
+    console.log(obj.name);
+
+    /*1.4删除对象属性：delete 对象.属性名*/
+    delete obj.name;
+    console.log(obj.name);
+
+    /*
+    in运算符：检查对象中是否含有该属性
+        "属性名" in 对象
+     */
+
+    /*
+    js中的变量都是保存在栈内存中
+    引用数据类型：对象名保存在栈内存、值保存在 堆 内存中
+    基本数据类型：值与值间独立，直接在 栈 内存中储存
+
+    基本类型比较就是单纯的值，而引用数据类型时比较的是引用地址
+     */
+
+
+    /*
+    2.使用字面量创建对象
+     */
+    var stu = {
+        name:"王超",
+        age:18,
+        "@email":"100@163.com"
+    }
+    console.log(stu["@email"]);
+
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+</body>
+</html>
