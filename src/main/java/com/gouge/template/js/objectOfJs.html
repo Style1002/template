@@ -79,10 +79,39 @@
     /*3.3使用函数表达式,末尾加;*/
 
     var run3 = function(){
-        document.write("首先创建一个匿名函数，然后赋值给一个变量")；
+        document.write("首先创建一个匿名函数，然后赋值给一个变量");
     };
 
+    /*函数的参数 也可以是一个对象 也可以是一个函数：函数名、函数名()调用函数相当于使用的返回值*/
 
+    function sum(a,b){
+        console.log(a+b);
+    }
+    sum(1,2);//调用函数时，不检查实参个数，多余的不会赋值、数量少的话，缺少的参数是undefined
+
+    /*返回值*/
+    function add(a,b,c){
+        return a+b+c;//如果return后不写值或不写return 将返回undefined
+    }
+    console.log(add(1,2,3));
+
+    (function(){
+        console.log("立即执行函数");
+    })();
+
+    /*掉方法：obj.name(); 掉函数name()  只是名称上的区别*/
+
+
+    /*枚举对象中的属性*/
+    var obj = {
+        name:"xxx",
+        age:18,
+        gender:"girl"
+    };
+    for(var n in obj){
+        console.log("属性名："+n);
+        console.log(obj[n]);//变量不能使用: obj.n
+    }
 </script>
 <head>
     <meta charset="UTF-8">
