@@ -21,6 +21,15 @@ import java.util.Map;
  * @data 2019/6/5 15:44
  */
 public class JsonUtils {
+    /**
+     *
+     * Gson：轻量级、快、默认不序列化null值对应的key如需new GsonBuilder().serializeNulls().create();、
+     *       转null为空""需手动处理
+     * Fastjson：中、默认不序列化null值对应的key如需JSONObject.toJSONString(request,SerializerFeature.WriteMapNullValue、
+     *           转null为空:JSONObject.toJSONString(request, SerializerFeature.WriteMapNullValue,SerializerFeature.WriteNullStringAsEmpty)、
+     *           只对VO起作用,Map List不起作用,另外jackson还能过滤掉你设置的属性
+     * Jackson：默认序列化null值对应的key如需不序列化实体加@JsonInclude(Include.NoN_NULL)及java上mapper.setSerializationInclusion(Include.NON_NULL);
+     */
 
     /**
      * 字符串转成对象
@@ -37,7 +46,8 @@ public class JsonUtils {
     }
 
     /**
-     * 转成字符串
+     * 对象转成字符串
+     *
      * @param obj
      * @param <T>
      * @return
