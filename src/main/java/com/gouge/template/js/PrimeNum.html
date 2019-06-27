@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript">
+
+    var num = prompt("输入一个大于1的整数：");
+    num = Number(num);
+    var primeNum = true;
+    console.log(num);
+    console.log(typeof num);
+    console.log(num % 1 === 0);
+    console.log(Math.ceil(num));
+    console.log(num);
+    if (num < 2 || !(Math.ceil(num) === num)) {
+        alert("不合法");
+    } else {
+        for (var a = 2; a < num; a++) {
+            if (num % a == 0) {
+                primeNum = false;
+            }
+        }
+        if (primeNum) {
+            alert("是质数");
+        } else {
+            alert("不是质数");
+        }
+    }
+
+
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+</body>
+</html>
